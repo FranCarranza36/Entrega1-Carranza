@@ -1,10 +1,10 @@
 # Pasos a seguir para inicializar la página web:
 
-##Instalar virtualenv:
+## Instalar virtualenv:
 
 py -m venv venv
 
-##Iniciar virtualenv:
+## Iniciar virtualenv:
 
 . venv/Scripts/activate
 
@@ -14,11 +14,11 @@ py -m venv venv
 
 pip install django
 
-##Generar la base de datos:
+## Generar la base de datos:
 
 py manage.py migrate
 
-##Inicializar el servidor:
+## Inicializar el servidor:
 
 py manage.py runserver 
 
