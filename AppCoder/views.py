@@ -21,13 +21,13 @@ def lista_futbolistas(request):
         if nombre == '' and apellido == '' and edad == '' : #Se considera que si no introdujo ningún campo, está queriendo ver todos.
             futbolistas = Futbolista.objects.all()
         elif nombre: 
-            if nombre.isalpha():
+            if nombre.replace(' ','').isalpha():
                 futbolistas = Futbolista.objects.filter(nombre = nombre)
             else:
                 error_nombre = 'Debe ingresar un nombre válido'
         
         elif apellido:
-            if apellido.isalpha():
+            if apellido.replace(' ','').isalpha():
                 futbolistas = Futbolista.objects.filter(apellido = apellido)
             else:
                 error_apellido = 'Debe ingresar un apellido válido'
@@ -66,13 +66,13 @@ def lista_basquetbolistas(request):
         if nombre == '' and apellido == '' and triples == '' : #Se considera que si no introdujo ningún campo, está queriendo ver todos.
             basquetbolistas = Basquetbolista.objects.all()
         elif nombre: 
-            if nombre.isalpha():
+            if nombre.replace(' ','').isalpha():
                 basquetbolistas = Basquetbolista.objects.filter(nombre = nombre)
             else:
                 error_nombre = 'Debe ingresar un nombre válido'
         
         elif apellido:
-            if apellido.isalpha():
+            if apellido.replace(' ','').isalpha():
                 basquetbolistas = Basquetbolista.objects.filter(apellido = apellido)
             else:
                 error_apellido = 'Debe ingresar un apellido válido'
@@ -111,13 +111,13 @@ def lista_tenistas(request):
         if nombre == '' and apellido == '' and titulos == '' : #Se considera que si no introdujo ningún campo, está queriendo ver todos.
             tenistas = Tenista.objects.all()
         elif nombre: 
-            if nombre.isalpha():
+            if nombre.replace(' ','').isalpha():
                 tenistas = Tenista.objects.filter(nombre = nombre)
             else:
                 error_nombre = 'Debe ingresar un nombre válido'
         
         elif apellido:
-            if apellido.isalpha():
+            if apellido.replace(' ','').isalpha():
                 tenistas = Tenista.objects.filter(apellido = apellido)
             else:
                 error_apellido = 'Debe ingresar un apellido válido'
