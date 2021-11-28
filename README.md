@@ -32,4 +32,4 @@ py manage.py runserver
 - Todos los campos son obligatorios al cargar un deportista. De no ser así, un mensaje indica que es obligatorio llenar el campo.
 - Para crear un deportista primero se accede a la opción de la clase deseada en la parte superior del Home, y luego se ingresa al link "Crear Nuevo X".
 - Se permite introducir primer y segundo nombre con espacio, tanto en la búsqueda como en la creación de deportistas.
-- Para una ingresar al Panel de Administración de Django, ir a http://127.0.0.1:8000/admin/ o donde corresponda según la IP y puerto del servidor montado.
+- Para una ingresar al Panel de Administración de Django, ir a http://127.0.0.1:8000/admin/ o donde corresponda según la IP y puerto del servidor montado..
