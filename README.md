@@ -12,7 +12,7 @@ Iniciar virtualenv:
 
 Instalar django con el siguiente comando:
 
-### pip install django
+## pip install django
 
 Generar la base de datos:
 
