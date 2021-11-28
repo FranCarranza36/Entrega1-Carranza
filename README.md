@@ -1,6 +1,6 @@
 # Pasos a seguir para inicializar la página web:
 
-## Instalar virtualenv:
+## Iniciar una terminal de Bash e instalar virtualenv:
 
 py -m venv venv
 
@@ -8,7 +8,9 @@ py -m venv venv
 
 . venv/Scripts/activate
 
-- Crear superuser ??
+## Crear superuser:
+
+py manage.py createsuperuser
 
 ## Instalar django con el siguiente comando:
 
