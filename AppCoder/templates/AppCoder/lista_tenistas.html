@@ -1,0 +1,49 @@
+{% extends 'AppCoder/index.html' %}
+
+{% block head_block %}
+<title>Tenistas</title>
+<a href= {% url 'Crear_Tenista' %}>Crear Nuevo Tenista</a>
+{% endblock head_block %}
+
+{% block body_block %}
+    <form action= {% url 'Tenistas' %} method = "GET">
+        {% csrf_token %} 
+        <p>
+        <input type = "text" name = 'nombre' placeholder="Nombre a buscar..."/>
+        </p>
+        <p>
+            <input type = "text" name = 'apellido' placeholder="Apellido a buscar..."/>
+        </p>
+        <p>
+            <input type = "text" name = 'titulos' placeholder="Títulos a buscar..."/>
+        </p>
+        <input type = "submit" value="Buscar"/>
+    </form>
+    <ul>
+        {% if tenistas %} 
+            {% for tenista in tenistas %}
+            <li>
+                {{tenista}}
+            </li>
+            {% endfor %}
+        {% elif error_nombre %}
+            <h3 style = color:red>
+                {{error_nombre}}
+            </h3>
+        {% elif error_apellido %}
+            <h3 style = color:red>
+                {{error_apellido}}
+            </h3>
+        {% elif error_titulos %}
+            <h3 style = color:red>
+                {{error_titulos}}
+            </h3>
+        {% else %}
+            <h3 style = color:darkolivegreen>
+                No se encontraron tenistas
+            </h3>
+            
+        {% endif %}
+    </ul>
+
+{% endblock body_block %}

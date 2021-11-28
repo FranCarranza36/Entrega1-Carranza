@@ -1,0 +1,49 @@
+{% extends 'AppCoder/index.html' %}
+
+{% block head_block %}
+<title>Futbolistas</title>
+<a href= {% url 'Crear_Futbolista' %}>Crear Nuevo Futbolista</a>
+{% endblock head_block %}
+
+{% block body_block %}
+    <form action= {% url 'Futbolistas' %} method = "GET">
+        {% csrf_token %} 
+        <p>
+        <input type = "text" name = 'nombre' placeholder="Nombre a buscar..."/>
+        </p>
+        <p>
+            <input type = "text" name = 'apellido' placeholder="Apellido a buscar..."/>
+        </p>
+        <p>
+            <input type = "text" name = 'edad' placeholder="Edad a buscar..."/>
+        </p>
+        <input type = "submit" value="Buscar"/>
+    </form>
+    <ul>
+        {% if futbolistas %} 
+            {% for futbolista in futbolistas %}
+            <li>
+                {{futbolista}}
+            </li>
+            {% endfor %}
+        {% elif error_nombre %}
+            <h3 style = color:red>
+                {{error_nombre}}
+            </h3>
+        {% elif error_apellido %}
+            <h3 style = color:red>
+                {{error_apellido}}
+            </h3>
+        {% elif error_edad %}
+            <h3 style = color:red>
+                {{error_edad}}
+            </h3>
+        {% else %}
+            <h3 style = color:darkolivegreen>
+                No se encontraron futbolistas
+            </h3>
+            
+        {% endif %}
+    </ul>
+
+{% endblock body_block %}
