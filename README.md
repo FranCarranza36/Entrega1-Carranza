@@ -1,25 +1,25 @@
 # Pasos a seguir para inicializar la página web:
 
-Instalar virtualenv con el siguiente comando:
+##Instalar virtualenv:
 
-### py -m venv venv
+py -m venv venv
 
-Iniciar virtualenv:
+##Iniciar virtualenv:
 
-### . venv/Scripts/activate
+. venv/Scripts/activate
 
 - Crear superuser ??
 
-Instalar django con el siguiente comando:
+## Instalar django con el siguiente comando:
 
-## pip install django
+pip install django
 
-Generar la base de datos:
+##Generar la base de datos:
 
-### py manage.py migrate
+py manage.py migrate
 
-6. Inicializar el servidor:
+##Inicializar el servidor:
 
-### py manage.py runserver 
+py manage.py runserver 
 
 - Página principal, link a páginas secundarias
